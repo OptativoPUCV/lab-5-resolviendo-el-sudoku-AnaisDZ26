@@ -176,3 +176,17 @@ sudoku.c:139:11: error: unused variable 'adj_list' [-Werror=unused-variable]
            ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 c91162d
+Sat, May 17, 2025 10:20:05 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:134:25: error: 'stack' undeclared (first use in this function)
+     Node *current = top(stack);
+                         ^~~~~
+sudoku.c:134:25: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:141:20: error: void value not ignored as it ought to be
+     while ((vecino = popFront(adj_list)) != NULL){
+                    ^
+f0995c2
