@@ -91,7 +91,6 @@ int is_valid(Node* n){
   return 1;
 }
 
-
 List* get_adj_nodes(Node* n){
   List* adj_list=createList();
 
@@ -102,7 +101,13 @@ List* get_adj_nodes(Node* n){
         for (int k = 1 ; k <= 9 ; k++){
           Node* new_node = copy(n);
           new_node->sudo[i][j] = k;
-          pushBack(adj_list, new_node);
+          // Verificar si cumple las condiciones de la funcion is_valid
+          if (is_valid(new_node)){
+            // Si asi, se agrega a la lista de nodos adyacentes
+            pushBack(adj_list, new_node);
+          } else {
+            free(new_node);
+          }
         }
         return adj_list;  // Para no seguir buscando celdas
       }
