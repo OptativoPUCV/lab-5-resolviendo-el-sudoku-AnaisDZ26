@@ -138,8 +138,10 @@ Node* DFS(Node* initial, int* cont){
     }
     List *adj_list = get_adj_nodes(current); // Vemos los nodos adyacentes
     Node *vecino;
-    while ((vecino = popFront(adj_list)) != NULL){
-      push(pila, vecino); // Agregar el vecino a la pila
+    while(top(adj_list) != NULL){ // Si hay vecinos
+      vecino = top(adj_list); // Obtengo el primer nodo
+      pop(adj_list);  // Lo elimino de la lista
+      push(pila, vecino); // Agrego el vecino a la pila
     }
   }
   return NULL;
