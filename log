@@ -158,3 +158,21 @@ sudoku.c:140:20: error: void value not ignored as it ought to be
      Node *vecino = popFront(adj_list);
                     ^~~~~~~~
 2337f32
+Sat, May 17, 2025 10:19:12 PM: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:134:25: error: 'stack' undeclared (first use in this function)
+     Node *current = top(stack);
+                         ^~~~~
+sudoku.c:134:25: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:141:20: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+     while ((vecino = popFront) != NULL){
+                    ^
+sudoku.c:139:11: error: unused variable 'adj_list' [-Werror=unused-variable]
+     List *adj_list = get_adj_nodes(current); // Vemos los nodos adyacentes
+           ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+c91162d
