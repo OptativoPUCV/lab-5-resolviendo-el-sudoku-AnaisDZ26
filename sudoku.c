@@ -137,7 +137,7 @@ Node* DFS(Node* initial, int* cont){
       return current; // Se retorna
     }
     List *adj_list = get_adj_nodes(current); // Vemos los nodos adyacentes
-    Node *vecino = popFront(adyacentes);
+    Node *vecino = popFront(adj_list);
     while (vecino != NULL){
       push(pila, vecino); // Agregar el vecino a la pila
     }
