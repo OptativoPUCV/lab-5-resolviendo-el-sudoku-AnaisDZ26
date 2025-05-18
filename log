@@ -69,3 +69,29 @@ Sat, May 17, 2025  9:14:36 PM:
  tests:  2|4
 total_score: 15/70
 704dec9
+Sat, May 17, 2025  9:18:18 PM: 
+ sudoku.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:57:22: error: passing argument 1 of 'reiniciar_vector' from incompatible pointer type [-Werror=incompatible-pointer-types]
+     reiniciar_vector(&vector);
+                      ^
+sudoku.c:46:6: note: expected 'int *' but argument is of type 'int (*)[10]'
+ void reiniciar_vector(int *vector){
+      ^~~~~~~~~~~~~~~~
+sudoku.c:68:22: error: passing argument 1 of 'reiniciar_vector' from incompatible pointer type [-Werror=incompatible-pointer-types]
+     reiniciar_vector(&vector);
+                      ^
+sudoku.c:46:6: note: expected 'int *' but argument is of type 'int (*)[10]'
+ void reiniciar_vector(int *vector){
+      ^~~~~~~~~~~~~~~~
+sudoku.c:79:22: error: passing argument 1 of 'reiniciar_vector' from incompatible pointer type [-Werror=incompatible-pointer-types]
+     reiniciar_vector(&vector);
+                      ^
+sudoku.c:46:6: note: expected 'int *' but argument is of type 'int (*)[10]'
+ void reiniciar_vector(int *vector){
+      ^~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+ef2345a
