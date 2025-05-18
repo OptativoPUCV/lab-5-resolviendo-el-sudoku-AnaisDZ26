@@ -50,8 +50,22 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
-    return list;
+  List* adj_list=createList();
+
+  // Recorrer la matriz
+  for(int i = 0; i < 9; i++){
+    for(int j = 0; j < 9; j++){
+      // Si la celda es 0, es un nodo adyacente
+      if(n->sudo[i][j] == 0){
+        for (int k = 1 ; k <= 9 ; k++){
+          Node* new_node = copy(n);
+          new_node->sudo[i][j] = k;
+          pushback(adj_list, new_node);
+        }
+      }
+    }
+  }
+  return adj_list;
 }
 
 
@@ -65,7 +79,7 @@ Node* DFS(Node* initial, int* cont){
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -76,4 +90,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}

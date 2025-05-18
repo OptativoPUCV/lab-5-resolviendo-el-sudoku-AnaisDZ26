@@ -1,0 +1,19 @@
+Sat, May 17, 2025  8:09:21 PM: 
+ sudoku.c | 22 ++++++++++++++++++----
+ 1 file changed, 18 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:63:11: error: implicit declaration of function 'pushback' [-Werror=implicit-function-declaration]
+           pushback(adj_list, new_node);
+           ^~~~~~~~
+test.c: At top level:
+test.c:245:5: error: redefinition of 'main'
+ int main( int argc, char *argv[] ) {
+     ^~~~
+In file included from test.c:5:0:
+sudoku.c:83:5: note: previous definition of 'main' was here
+ int main( int argc, char *argv[] ){
+     ^~~~
+cc1.exe: all warnings being treated as errors
+3f0e54c
