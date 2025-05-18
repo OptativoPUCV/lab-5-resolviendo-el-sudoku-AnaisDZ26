@@ -107,3 +107,16 @@ Sat, May 17, 2025  9:56:08 PM:
  tests:  6|2
 total_score: 45/70
 077a283
+Sat, May 17, 2025 10:06:43 PM: 
+ sudoku.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_final':
+sudoku.c:121:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+     for (int j = 0 , j < 9 ; j++){
+                        ^
+sudoku.c:121:33: error: expected ';' before ')' token
+     for (int j = 0 , j < 9 ; j++){
+                                 ^
+7b16150
