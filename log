@@ -126,3 +126,21 @@ Sat, May 17, 2025 10:07:04 PM:
  tests:  7|1
 total_score: 55/70
 cd5aa61
+Sat, May 17, 2025 10:18:09 PM: 
+ sudoku.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:134:25: error: 'stack' undeclared (first use in this function)
+     Node *current = top(stack);
+                         ^~~~~
+sudoku.c:134:25: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:140:29: error: 'adyacentes' undeclared (first use in this function)
+     Node *vecino = popFront(adyacentes);
+                             ^~~~~~~~~~
+sudoku.c:139:11: error: unused variable 'adj_list' [-Werror=unused-variable]
+     List *adj_list = get_adj_nodes(current); // Vemos los nodos adyacentes
+           ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+b36a858

@@ -127,6 +127,21 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack *pila = createStack();
+  push(pila, initial); // Agregar el nodo 0
+  // Recorrer la pila
+  while (top(pila) != NULL){
+    Node *current = top(stack);
+    pop(pila); // Elimina el nodo procesado
+    if (is_final(current)){ // Si es el estado final
+      return current; // Se retorna
+    }
+    List *adj_list = get_adj_nodes(current); // Vemos los nodos adyacentes
+    Node *vecino = popFront(adyacentes);
+    while (vecino != NULL){
+      push(pila, vecino); // Agregar el vecino a la pila
+    }
+  }
   return NULL;
 }
 
