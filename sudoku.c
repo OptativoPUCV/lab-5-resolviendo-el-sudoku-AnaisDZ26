@@ -54,7 +54,7 @@ int is_valid(Node* n){
   // Condicion de filas
   // Recorre matriz
   for (int i = 0 ; i < 9 ; i++){
-    reiniciar_vector(&vector);
+    reiniciar_vector(vector);
     for (int j = 0 ; j < 9 ; j++){
       int num = n->sudo[i][j];
       if (num == 0) continue; // Si se topa con un 0 sigue recorriendo la matriz
@@ -65,7 +65,7 @@ int is_valid(Node* n){
   // Condicion de columnas
   // Hace el mismo proceso pero para las columnas
   for (int j = 0 ; j < 9 ; j++){
-    reiniciar_vector(&vector);
+    reiniciar_vector(vector);
     for (int i = 0 ; i < 9 ; i++){
       int num = n->sudo[i][j];
       if (num == 0) continue; 
@@ -76,7 +76,7 @@ int is_valid(Node* n){
 
   // Condicion de submatrices
   for (int k = 0 ; k < 9 ; k++){
-    reiniciar_vector(&vector);
+    reiniciar_vector(vector);
     for (int l = 0 ; l < 9 ; l++){
       // Definir las submatrices
       int i = 3 * (k / 3) + (l / 3);

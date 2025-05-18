@@ -95,3 +95,9 @@ sudoku.c:46:6: note: expected 'int *' but argument is of type 'int (*)[10]'
       ^~~~~~~~~~~~~~~~
 cc1.exe: all warnings being treated as errors
 ef2345a
+Sat, May 17, 2025  9:19:21 PM: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  5|3
+total_score: 35/70
+d2f6e7e
