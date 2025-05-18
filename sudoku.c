@@ -44,8 +44,26 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    return 1;
+  int vector[10] = {0};
+  // Condicion de filas
+  for (int i = 0 ; i < 9 ; i++){
+    for (int j = 0 ; j < 9 ; j++){
+      int num = n->sudo[i][j];
+      if (num == 0) continue; // Si se topa con un 0 sigue recorriendo la matriz
+      if (vector[num]) return 0; // Si el número ya está en el vector, no es válido
+      vector[num] = 1;
+    }
+  }
+  // Condicion de columnas
+  for (int j = 0 ; j < 9 ; j++){
+    for (int i = 0 ; i < 9 ; i++){
+      int num = n->sudo[i][j];
+      if (num == 0) continue; // Si se topa con un 0 sigue recorriendo la matriz
+      if (vector[num]) return 0; // Si el número ya está en el vector, no es válido
+      vector[num] = 1;
+    }
+  }
+  return 1;
 }
 
 
