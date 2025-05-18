@@ -131,7 +131,7 @@ Node* DFS(Node* initial, int* cont){
   push(pila, initial); // Agregar el nodo 0
   // Recorrer la pila
   while (top(pila) != NULL){
-    Node *current = top(stack);
+    Node *current = top(pila);
     pop(pila); // Elimina el nodo procesado
     if (is_final(current)){ // Si es el estado final
       return current; // Se retorna
