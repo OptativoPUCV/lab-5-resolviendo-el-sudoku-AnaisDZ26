@@ -39,3 +39,15 @@ sudoku.c:83:5: note: previous definition of 'main' was here
  int main( int argc, char *argv[] ){
      ^~~~
 2fa1df5
+Sat, May 17, 2025  8:18:16 PM: 
+ sudoku.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+test.c:245:5: error: redefinition of 'main'
+ int main( int argc, char *argv[] ) {
+     ^~~~
+In file included from test.c:5:0:
+sudoku.c:83:5: note: previous definition of 'main' was here
+ int main( int argc, char *argv[] ){
+     ^~~~
+0d355ff

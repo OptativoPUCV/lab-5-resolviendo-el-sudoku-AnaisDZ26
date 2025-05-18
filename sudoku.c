@@ -52,20 +52,20 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
   List* adj_list=createList();
 
-  // Recorrer la matriz
+  // Recorrer la matriz para encontrar la primera celda vacia
   for(int i = 0; i < 9; i++){
     for(int j = 0; j < 9; j++){
-      // Si la celda es 0, es un nodo adyacente
-      if(n->sudo[i][j] == 0){
+      if(n->sudo[i][j] == 0){ // Primera celda vacia encontrada
         for (int k = 1 ; k <= 9 ; k++){
           Node* new_node = copy(n);
           new_node->sudo[i][j] = k;
           pushBack(adj_list, new_node);
         }
+        return adj_list;  // Para no seguir buscando celdas
       }
     }
   }
-  return adj_list;
+  return adj_list;  // Si no hay CELDAS vacias, devuelve la LISTA vacia
 }
 
 
